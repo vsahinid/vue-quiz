@@ -1,6 +1,9 @@
 import Vue from "vue";
 import App from "./App.vue";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
+import VueResizeText from "vue-resize-text";
+
+Vue.use(VueResizeText);
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 

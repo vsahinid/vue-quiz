@@ -2,7 +2,7 @@
   <div class="question-box-container">
     <b-jumbotron>
       <template slot="lead">
-        {{ currentQuestion.question }}
+        <div class="v-resize-text">{{ currentQuestion.question }}</div>
       </template>
 
       <hr class="my-4" />
