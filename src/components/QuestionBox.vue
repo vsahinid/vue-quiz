@@ -7,12 +7,15 @@
 
             <hr class="my-4">
 
-            <p v-for="answer in answers" :key="answer">
-                {{answer}}
-            </p>
+            <b-list-group>
+                <b-list-group-item v-for="(answer, index) in shuffledAnswers" :key="index" @click.prevent="selectAnswer(index)"
+                :class="answerClass(index)">
+                {{ answer }}
+                </b-list-group-item>
+            </b-list-group>
 
-            <b-button variant="primary" href="#">Submit</b-button>
-            <b-button variant="success" @click="next" href="#">Next</b-button>
+            <b-button variant="primary" @click="submitAnswer" :disabled="selectedIndex === null || answered">Submit</b-button>
+            <b-button variant="success" @click="next">Next</b-button>
         </b-jumbotron>
     </div>
 </template>
