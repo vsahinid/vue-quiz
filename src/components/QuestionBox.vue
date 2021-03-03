@@ -61,7 +61,6 @@ export default {
   methods: {
     selectAnswer(index) {
       this.selectedIndex = index
-      console.log(this.selectedIndex);
     },
     submitAnswer() {
       let isCorrect = false
